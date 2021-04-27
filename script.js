@@ -150,11 +150,11 @@ $("#status_pernikahan").change(function () {
     if ($("#jumlah_anak").length === 0) {
       isi =
         '<div class="form-group"> <label for="jumlah_anak">Jumlah Anak <sup style="color: red;">*</sup> </label> <select class="form-control select2 single" id="jumlah_anak" name="jumlah_anak" data-placeholder="Pilih Jumlah Anak" style="width: 100%;"> <option></option> <option value="0"' +
-        (anak == 0 ? " selected" : "") +
+        (anak === 0 ? " selected" : "") +
         '>0</option> <option value="1"' +
-        (anak == 1 ? " selected" : "") +
+        (anak === 1 ? " selected" : "") +
         '>1</option>  <option value="2"' +
-        (anak == 2 ? " selected" : "") +
+        (anak === 2 ? " selected" : "") +
         ">2</option> </select> </div>";
 
       $(isi).insertAfter($("#status_pernikahan").parent().parent());
@@ -331,7 +331,7 @@ $("form button[type=submit]").click(function () {
     }
   });
 
-  if (flag == 1) {
+  if (flag === 1) {
     return false;
   }
 
@@ -1117,7 +1117,7 @@ $("input[type=number]").on("focus", function () {
 // format nominal rupiah
 var formatNominal = (function nominal() {
   $(".nominal").each(function () {
-    if ($(this).html() == 0) $(this).html("-");
+    if ($(this).html() === 0) $(this).html("-");
     else
       $(this).html(
         "Rp" +
