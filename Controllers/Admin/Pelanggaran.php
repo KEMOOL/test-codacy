@@ -34,7 +34,6 @@ class Pelanggaran extends BaseController
             $errors = Services::validation()->getErrors();
 
             $output = [
-                'data' => $_POST,
                 'error' => $errors,
                 csrf_token() => csrf_hash()
             ];
